@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--favicon-->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="imnage/x-icon"
+    />
+    <!--remix icon-->
+    <!--remix icon's credits https://remixicon.com/-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--css-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>My portfolio</title>
+  </head>
+  <body>
+    <!--header profile-->
+    <header class="profile container">
+      <div class="profileContainer grid">
+        <div class="profileData">
+          <div class="profileBorder">
+            <div class="profilePerfil">
+              <img src="./assets/img/perfil.png" alt="" />
+            </div>
+          </div>
+
+          <h2 class="profileName">Teste Teste</h2>
+          <h3 class="profileProfession">Web developer</h3>
+
+          <ul class="profileSocial">
+            <a href="" target="_blank" class="profileSocialLink">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="" target="_blank" class="profileSocialLink">
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+            <a href="" target="_blank" class="profileSocialLink">
+              <i class="ri-github-line"></i>
+            </a>
+          </ul>
+        </div>
+
+        <div class="profileInfo grid">
+          <div class="profileInfoGroup">
+            <h3 class="profileInfoNumber">7</h3>
+            <p class="profileInfoDescription">
+              Years of <br />
+              Work
+            </p>
+          </div>
+
+          <div class="profileInfoGroup">
+            <h3 class="profileInfoNumber">+124</h3>
+            <p class="profileInfoDescription">
+              Completed <br />
+              projects
+            </p>
+          </div>
+
+          <div class="profileInfoGroup">
+            <h3 class="profileInfoNumber">96</h3>
+            <p class="profileInfoDescription">
+              Satisfied <br />
+              customers
+            </p>
+          </div>
+        </div>
+
+        <div class="profileButtons">
+          <a download="" href="" class="button"
+            >Download CV <i class="ri-arrow-down-line"></i
+          ></a>
+
+          <div class="profileButtonsSmall">
+            <a href="" target="_blank" class="button buttonSmall buttonGray">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+            <a href="" target="_blank" class="button buttonSmall buttonGray">
+              <i class="ri-messenger-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--main-->
+    <main class="main">
+      <section class="filters container">
+        <!--filters tabs-->
+        <ul class="filtersContent">
+          <button class="filtersButton" data-target="#projects">
+            Projects
+          </button>
+          <button class="filtersButton" data-target="#skills">Skills</button>
+        </ul>
+
+        <div class="filtersSections">
+          <!--projects-->
+          <div class="projectsContent grid" data-content id="projects">
+            <article class="projectsCard">
+              <img src="./assets/img/project1.jpg" alt="" class="projectsImg" />
+
+              <div class="projectsModal">
+                <div>
+                  <span class="projectsSubtitle"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!--skills-->
+          <div class="skillsContent grid" data-content="skills"></div>
+        </div>
+      </section>
+    </main>
+    <!--footer-->
+    <footer class="footerContainer"></footer>
+    <!--scrollreveal-->
+    <script src=""></script>
+    <!--js-->
+    <script src="script.js"></script>
+  </body>
+</html>
