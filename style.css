@@ -237,8 +237,147 @@ img {
 .buttonGray:hover {
   background-color: var(--text-color-light);
 }
+
 /*filters tabs*/
+.filtersContent {
+  margin: 2rem 0 2.5rem;
+  background-color: var(--text-color-lighten);
+  padding: 0.375rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: .rem;
+}
+
+.filtersButton {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
+  font-weight: 500;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.filtersButton:hover {
+  background-color: var(--body-color);
+}
 
 /*projects*/
+.projectsCard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.projectsCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.projectsModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    hsla(var(--hue), 24%, 40%, 0.3) 0%,
+    hsla(var(--hue), 24%, 4%, 1) 95%
+  );
+  display: grid;
+  align-items: flex-end;
+  padding: 1.5rem 1.25rem;
+  transition: .3s;
+}
+
+.projectsSubtitle, .projectsTitle {
+  color: #fff;
+}
+
+.projectsSubtitle {
+  font-size: var(--smallter-font-size)
+}
+
+.projectsTitle {
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.projectsButton {
+  padding: .5rem
+}
+
+.projectsCard:hover .projectsModal {
+  bottom: 0;
+}
 
 /*skills*/
+.skillsContent {
+  row-gap: 3.5rem;
+}
+
+.skillsTitle {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skillsBox {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+.skillsGroup {
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+}
+
+.skillsData {
+  display: flex;
+  column-gap: .5rem;
+}
+
+.skillsData i {
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.skillsName {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.skillsLevel {
+  font-size: var(--smallter-font-size)
+}
+
+/*hide and show projects & skills*/
+.filters [data-content] {
+  display: none;
+}
+
+.filtersActive[data-content] {
+  display: grid;
+}
+/*activate button filter*/
+
+/*footer*/
+
+/*scroll bar*/
+
+/*breakpoints*/
+/*for small devices*/
+
+/*for medium devices*/
+
+/*for large devices*/
