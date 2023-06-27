@@ -6,11 +6,11 @@
   /*colors*/
   /*colors mode HSL(hue, saturation, lightness)*/
   /*
-        Blue: hsl(207, 90%, 61%)
-        Purple: hsl(250, 66%, 75%)
-        Pink:: hsl(356, 66%, 75%)
-        Teal: hsl(174, 63%, 62%)
-    */
+    Blue: hsl(207, 90%, 61%)
+    Purple: hsl(250, 66%, 75%)
+    Pink:: hsl(356, 66%, 75%)
+    Teal: hsl(174, 63%, 62%)
+  */
 
   --hue: 207;
   --sat: 90%;
@@ -58,6 +58,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: 0.3s; /*for animation dark mode*/
 }
 
 h1,
@@ -79,11 +80,54 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 /*theme*/
+.changeTheme {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.changeTheme:hover {
+  color: var(--first-color);
+}
 
 /*variables dark theme*/
+body.darkTheme {
+  --title-color: hsl(var(--hue), 12%, 95%);
+  --text-color: hsl(var(--hue), 12%, 75%);
+  --body-color: hsl(var(--hue), 40%, 8%);
+  --container-color: hsl(var(--hue), 24%, 12%);
+}
 
 /*color changes in some parts of the website, in light theme*/
+.darkTheme .buttonGray {
+  background-color: var(--container-color);
+}
+
+.darkTheme .buttonGray:hover {
+  background-color: hsl(var(--hue), 24%, 16%);
+}
+
+.darkTheme .filtersContent {
+  background-color: var(--container-color);
+}
+
+.darkTheme::-webkit-scrollbar {
+  background-color: hsl(var(--hue), 8%, 16%);
+}
+
+.darkTheme::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 8%, 24%);
+}
+
+.darkTheme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 8%, 32%);
+}
 
 /*reusable css classes*/
 .container {
@@ -294,24 +338,25 @@ img {
   display: grid;
   align-items: flex-end;
   padding: 1.5rem 1.25rem;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.projectsSubtitle, .projectsTitle {
+.projectsSubtitle,
+.projectsTitle {
   color: #fff;
 }
 
 .projectsSubtitle {
-  font-size: var(--smallter-font-size)
+  font-size: var(--smallter-font-size);
 }
 
 .projectsTitle {
   font-size: var(--h3-font-size);
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .projectsButton {
-  padding: .5rem
+  padding: 0.5rem;
 }
 
 .projectsCard:hover .projectsModal {
@@ -343,7 +388,7 @@ img {
 
 .skillsData {
   display: flex;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
 .skillsData i {
@@ -358,7 +403,7 @@ img {
 }
 
 .skillsLevel {
-  font-size: var(--smallter-font-size)
+  font-size: var(--smallter-font-size);
 }
 
 /*hide and show projects & skills*/
@@ -369,15 +414,146 @@ img {
 .filtersActive[data-content] {
   display: grid;
 }
+
 /*activate button filter*/
+.filterTabActive {
+  background-color: var(--body-color);
+}
 
 /*footer*/
+.footerCopy {
+  display: block;
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
 
 /*scroll bar*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--hue), 8%, 66%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: hsl(var(--hue), 8%, 54%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 8%, 44%);
+}
 
 /*breakpoints*/
 /*for small devices*/
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .profileInfo {
+    column-gap: 1.5rem;
+  }
+
+  .profileButtons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .skillsBox {
+    column-gap: 1rem;
+  }
+}
 
 /*for medium devices*/
+@media screen and (min-width: 576px) {
+  .projectsContent {
+    grid-template-columns: 332px;
+    justify-content: center;
+  }
+
+  .filtersContent {
+    width: 332px;
+    margin: 3rem auto;
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .projectsContent,
+  .skillsContent {
+    grid-template-columns: repeat(2, 332px);
+    justify-content: center;
+  }
+
+  .skillsContent {
+    justifyContent: center;
+    columnGap: 3rem;
+  }
+}
 
 /*for large devices*/
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .changeTheme {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+
+  .profile {
+    padding-top: 4rem;
+  }
+
+  .profileBorder {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 1rem;
+  }
+
+  .profilePerfil {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profilePerfil img {
+    width: 90px;
+  }
+
+  .profileProfession {
+    margin-bottom: 1.5rem
+  }
+
+  .profileInfo {
+    column-gap: 3rem;
+  }
+
+  .profileInfoDescription {
+    font-size: var(--small-font-size);
+  }
+
+  .profileButtons {
+    column-gap: 2rem;
+  }
+
+  .projectsContent {
+    gap: 2rem 3rem;
+  }
+
+  .projectsModal {
+    padding: 1.5rem;
+  }
+
+  .skillsTitle {
+    font-size: var(--normal-font-size);
+    margin-bottom: 2.5rem;
+  }
+
+  .footerCopy {
+    margin: 4.5rem 0 2.5rem;
+  }
+}

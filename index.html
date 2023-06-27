@@ -19,11 +19,15 @@
     <!--css-->
     <link rel="stylesheet" href="style.css" />
 
-    <title>My portfolio</title>
+    <title>Mini portfolio website - Bedimcode</title>
   </head>
   <body>
     <!--header profile-->
     <header class="profile container">
+
+      <!--theme button-->
+      <i class="ri-moon-line changeTheme" id="themeButton"></i>
+
       <div class="profileContainer grid">
         <div class="profileData">
           <div class="profileBorder">
@@ -32,17 +36,17 @@
             </div>
           </div>
 
-          <h2 class="profileName">Teste Teste</h2>
+          <h2 class="profileName">Gianell Vusy</h2>
           <h3 class="profileProfession">Web developer</h3>
 
           <ul class="profileSocial">
-            <a href="" target="_blank" class="profileSocialLink">
+            <a href="https://www.instagram.com/" target="_blank" class="profileSocialLink">
               <i class="ri-instagram-line"></i>
             </a>
-            <a href="" target="_blank" class="profileSocialLink">
+            <a href="https://www.linkedin.com/" target="_blank" class="profileSocialLink">
               <i class="ri-linkedin-box-line"></i>
             </a>
-            <a href="" target="_blank" class="profileSocialLink">
+            <a href="https://github.com/" target="_blank" class="profileSocialLink">
               <i class="ri-github-line"></i>
             </a>
           </ul>
@@ -75,15 +79,15 @@
         </div>
 
         <div class="profileButtons">
-          <a download="" href="" class="button"
+          <a download="" href="./assets/doc/cv.pdf" class="button"
             >Download CV <i class="ri-arrow-down-line"></i
           ></a>
 
           <div class="profileButtonsSmall">
-            <a href="" target="_blank" class="button buttonSmall buttonGray">
+            <a href="https://web.whatsapp.com/" target="_blank" class="button buttonSmall buttonGray">
               <i class="ri-whatsapp-line"></i>
             </a>
-            <a href="" target="_blank" class="button buttonSmall buttonGray">
+            <a href="https://www.messenger.com/" target="_blank" class="button buttonSmall buttonGray">
               <i class="ri-messenger-line"></i>
             </a>
           </div>
@@ -96,7 +100,7 @@
       <section class="filters container">
         <!--filters tabs-->
         <ul class="filtersContent">
-          <button class="filtersButton" data-target="#projects">
+          <button class="filtersButton filterTabActive" data-target="#projects">
             Projects
           </button>
           <button class="filtersButton" data-target="#skills">Skills</button>
@@ -179,7 +183,7 @@
         </div>
 
           <!--skills-->
-          <div class="skillsContent grid" data-content="skills">
+          <div class="skillsContent grid" data-content id="skills">
             <div class="skillsArea">
               <h3 class="skillsTitle">
                 Frontend developer
@@ -309,10 +313,15 @@
         </div>
       </section>
     </main>
+    
     <!--footer-->
-    <footer class="footerContainer"></footer>
+    <footer class="footerContainer">
+      <span class="footerCopy">
+        &#169; Bedimcode. All rigths reserved
+      </span>
+    </footer>
     <!--scrollreveal-->
-    <script src=""></script>
+    <script src="./assets/script/raw.githubusercontent.com_jlmakes_scrollreveal_master_dist_scrollreveal.min.js"></script>
     <!--js-->
     <script src="script.js"></script>
   </body>
